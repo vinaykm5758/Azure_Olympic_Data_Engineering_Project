@@ -1,0 +1,17 @@
+{
+	"name": "SQL script 1",
+	"properties": {
+		"content": {
+			"query": "-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_athletes]\n-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_coaches]\n-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_entriesgender]\n-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_medals]\n-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_teams]\n\nSELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_athletes]\n",
+			"metadata": {
+				"language": "sql"
+			},
+			"currentConnection": {
+				"databaseName": "TokyoOlympicDB",
+				"poolName": "Built-in"
+			},
+			"resultLimit": 5000
+		},
+		"type": "SqlQuery"
+	}
+}

@@ -1,0 +1,136 @@
+{
+	"name": "tbl_entriesgender",
+	"properties": {
+		"Name": "tbl_entriesgender",
+		"EntityType": "TABLE",
+		"TableType": "EXTERNAL",
+		"Namespace": {
+			"SchemaName": null,
+			"DatabaseName": "TokyoOlympicDB",
+			"DatabaseId": null
+		},
+		"StorageDescriptor": {
+			"Distribution": null,
+			"Columns": [
+				{
+					"Name": "Discipline",
+					"Description": null,
+					"OriginDataTypeName": {
+						"TypeName": "string",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 8000,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "string"
+						}
+					}
+				},
+				{
+					"Name": "Female",
+					"Description": null,
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					}
+				},
+				{
+					"Name": "Male",
+					"Description": null,
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					}
+				},
+				{
+					"Name": "Total",
+					"Description": null,
+					"OriginDataTypeName": {
+						"TypeName": "long",
+						"IsComplexType": false,
+						"IsNullable": true,
+						"Length": 0,
+						"Precision": 0,
+						"Scale": 0,
+						"Properties": {
+							"HIVE_TYPE_STRING": "long"
+						}
+					}
+				}
+			],
+			"ColumnSetEntityName": "956e8e14-826a-4023-9180-e6eaa7235e41",
+			"Format": {
+				"InputFormat": "org.apache.hadoop.mapred.SequenceFileInputFormat",
+				"OutputFormat": "org.apache.hadoop.hive.ql.io.HiveSequenceFileOutputFormat",
+				"FormatType": "csv",
+				"SerializeLib": "org.apache.hadoop.hive.serde2.lazy.LazySimpleSerDe",
+				"Properties": {
+					"path": "abfss://tokyoolympic@tokyoolympicdatausavinay.dfs.core.windows.net/transformed-data/entriesgender/part-00000-tid-4205140516354794782-3ee5c2f7-c4f7-476e-8814-4a6027d2250d-33-1-c000.csv",
+					"delimiter": ",",
+					"firstRowAsHeader": "true",
+					"multiLine": "false",
+					"serialization.format": "1",
+					"FormatTypeSetToDatabaseDefault": false,
+					"header": "true"
+				}
+			},
+			"Source": {
+				"Provider": "ADLS",
+				"Location": "abfss://tokyoolympic@tokyoolympicdatausavinay.dfs.core.windows.net/transformed-data/entriesgender/part-00000-tid-4205140516354794782-3ee5c2f7-c4f7-476e-8814-4a6027d2250d-33-1-c000.csv",
+				"Properties": {
+					"LinkedServiceName": "tokyo-olympic-sat-WorkspaceDefaultStorage",
+					"LocationSetToDatabaseDefault": false
+				}
+			},
+			"Properties": {
+				"textinputformat.record.delimiter": ",",
+				"compression": "",
+				"derivedModelAttributeInfo": "{\"attributeReferences\":{}}"
+			},
+			"Compressed": false,
+			"SerDeInfo": null,
+			"IsStoredAsSubdirectories": false
+		},
+		"Owner": null,
+		"CreateTime": 0,
+		"LastAccessTime": 0,
+		"Retention": 0,
+		"Temporary": false,
+		"IsRewriteEnabled": false,
+		"ViewOriginalText": null,
+		"ViewExpandedText": null,
+		"Origin": {
+			"Type": "SPARK"
+		},
+		"OriginObjectId": null,
+		"IsSharedEntity": false,
+		"PublishStatus": "PUBLISHED",
+		"Properties": {
+			"Description": "",
+			"DisplayFolderInfo": "{\"name\":\"Others\",\"colorCode\":\"\"}",
+			"PrimaryKeys": "",
+			"spark.sql.sources.provider": "csv",
+			"spark.sql.sources.schema.numParts": "1",
+			"spark.sql.sources.schema.part.0": "{\"type\":\"struct\",\"fields\":[{\"name\":\"Discipline\",\"type\":\"string\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Female\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Male\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}},{\"name\":\"Total\",\"type\":\"long\",\"nullable\":true,\"metadata\":{}}]}"
+		},
+		"ObjectVersion": 1,
+		"ObjectId": "cc32493d-b44d-496c-99a4-491389b88ed2",
+		"Description": ""
+	},
+	"type": "TABLE"
+}
