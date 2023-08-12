@@ -1,0 +1,50 @@
+-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_athletes]
+-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_coaches]
+-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_entriesgender]
+-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_medals]
+-- SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_teams]
+
+SELECT *  FROM [TokyoOlympicDB].[dbo].[tbl_athletes]
+
+-- Calculate the total number of athelets from each country
+
+SELECT 
+[Country],COUNT(*) as TotalAthletes
+FROM [TokyoOlympicDB].[dbo].[tbl_athletes]
+GROUP by Country
+order by COUNT(*) DESC
+
+--Calculate the total medals won by each country
+
+SELECT
+Team_Country,
+SUM(Gold) as Total_Gold_Medals,
+SUM(Silver) as Total_Silver_Medals,
+SUM(Bronze) as Total_Bronze_Medals
+FROM [TokyoOlympicDB].[dbo].[tbl_medals]
+group by Team_Country
+order by 2 desc;
+
+----
+
+--Average number of entries by gender by each discipline
+
+SELECT 
+Discipline,
+AVG(Female)as Avg_Female,
+AVG(Male) as Avg_Male
+FROM [TokyoOlympicDB].[dbo].[tbl_entriesgender]
+group by Discipline;
+
+
+------
+
+
+SELECT 
+Discipline,
+AVG(Female)as Avg_Female,
+AVG(Male) as Avg_Male
+FROM [TokyoOlympicDB].[dbo].[tbl_entriesgender]
+WHERE Discipline = 'Archery'
+group by Discipline;
+
