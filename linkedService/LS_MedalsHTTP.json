@@ -1,0 +1,13 @@
+{
+	"name": "LS_MedalsHTTP",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "HttpServer",
+		"typeProperties": {
+			"url": "https://raw.githubusercontent.com/vinaykm5758/Azure_Data_Engineering_Project/main/Medals.csv",
+			"enableServerCertificateValidation": true,
+			"authenticationType": "Anonymous"
+		}
+	}
+}
