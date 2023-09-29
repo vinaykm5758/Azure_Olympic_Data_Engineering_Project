@@ -1,5 +1,5 @@
-# Azure_Data_Engineering_Project
-This Repo holds information about various Azure data engineering projects
+# Azure_Olympic_Data_Engineering_Project
+This Repo holds information about various Azure data engineering project
 
 Project Name: **Olympic Data Analytics | Azure End-To-End Data Engineering Project**
 
